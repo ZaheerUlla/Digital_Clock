@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    min-height: 100vh;
+    width: 100%;
+    background-color: rgb(86, 143, 78);
+    position: relative;
+    /* row-gap: 20px; */
+}
+
+.row {
+    color: #fff;
+    max-width: 900px;
+    width: 90%;
+    height: 175px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.col {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* backdrop-filter: blur(100px); */
+    background: rgba(235, 0, 255, 0.11);
+}
+
+.col span {
+    font-size: 4vw; 
+    max-width: 180px;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+}
+
+
+
+.pmam{
+    margin-left: 10px;
+}
+
+.col span::after {
+    font-size: 1vw;
+    position: absolute;
+    bottom: -2vw; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hrs::after{
+    content: "HOURS";
+}
+
+.min::after{
+    content: "MINS";
+}
+
+.sec::after{
+    content: "SEC";
+}
+
+footer{
+    background: rgba(0, 204, 255, 0.11);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a {
+        text-decoration: none;
+    color: #fff;
+}
+
+@media screen and (max-width: 600px) {
+    .col span {
+        font-size: 8vw;
+    }
+
+    .col span::after {
+        font-size: 2vw;
+        bottom: -4vw;
+    }
+}
